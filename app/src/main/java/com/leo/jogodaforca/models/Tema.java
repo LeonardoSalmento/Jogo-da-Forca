@@ -14,6 +14,7 @@ import io.objectbox.relation.ToMany;
 public class Tema {
     @Id
     private Long id;
+    private String nome;
 
 
     @Backlink
@@ -28,6 +29,14 @@ public class Tema {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public ToMany<Texto> getTextoToMany() {
