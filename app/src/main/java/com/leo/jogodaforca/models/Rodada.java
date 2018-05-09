@@ -47,4 +47,20 @@ public class Rodada {
 
         return textosSorteados;
     }
+    
+    public Integer pontucaoRodada(boolean acertou, Integer qtdLetrasEscondidas){
+    	if (!acertou){
+    		return 0;
+    	}
+    	Integer pontuacao;
+    	
+    	pontuacao = qtdLetrasEscondidas * 15;
+    	return pontuacao;
+    }
+    
+    public Integer pontuacaoTotal(Integer pontuacaoAnterior, Integer pontuacaoRodada){
+    	Integer somaPontuacao;
+    	somaPontuacao = pontuacaoAnterior + pontuacaoRodada;
+    	return somaPontuacao;
+    }
 }
