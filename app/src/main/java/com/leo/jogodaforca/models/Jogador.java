@@ -8,6 +8,7 @@ import io.objectbox.relation.ToOne;
 /**
  * Created by Leo on 5/6/2018.
  */
+
 @Entity
 public class Jogador {
     @Id
@@ -15,7 +16,6 @@ public class Jogador {
     private String nome;
     private Integer pontuacao;
 
-    @Backlink
     private ToOne<Ranking> rankingToOne;
 
     public Jogador() {

@@ -7,6 +7,26 @@
     android:orientation="vertical"
     tools:context=".activities.AdicionarTextoActivity">
 
+    <RadioGroup
+        android:id="@+id/alternativas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/eh_palavra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Palavra" />
+
+        <RadioButton
+            android:id="@+id/eh_frase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frase" />
+
+    </RadioGroup>
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

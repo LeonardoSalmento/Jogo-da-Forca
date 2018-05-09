@@ -40,7 +40,7 @@ public class AdicionarTemaActivity extends AppCompatActivity {
         }
 
         else {
-            tema.setNome(txtTema);
+            tema.setNome(txtTema.trim());
             temaBox.put(tema);
 
             finish();

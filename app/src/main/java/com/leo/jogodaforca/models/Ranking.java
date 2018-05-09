@@ -10,6 +10,7 @@ import io.objectbox.relation.ToMany;
 /**
  * Created by Leo on 5/6/2018.
  */
+
 @Entity
 public class Ranking {
     @Id

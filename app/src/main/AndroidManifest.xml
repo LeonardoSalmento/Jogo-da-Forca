@@ -20,7 +20,8 @@
         <activity android:name=".activities.TemasActivity" />
         <activity android:name=".activities.TextosActivity" />
         <activity android:name=".activities.AdicionarTemaActivity" />
-        <activity android:name=".activities.AdicionarTextoActivity"></activity>
+        <activity android:name=".activities.AdicionarTextoActivity" />
+        <activity android:name=".activities.JogoActivity"></activity>
     </application>
 
 </manifest>

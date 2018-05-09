@@ -26,4 +26,9 @@ public class MainActivity extends AppCompatActivity {
     public void abrirAdicionarPalavra(View view) {
         startActivity(new Intent(this, TemasActivity.class));
     }
+
+    @OnClick(R.id.btn_iniciar_jogo)
+    public void abrirInciarJogo(View view) {
+        startActivity(new Intent(this, JogoActivity.class));
+    }
 }

@@ -1,27 +1,50 @@
 package com.leo.jogodaforca.models;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import io.objectbox.Box;
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
 import io.objectbox.relation.ToOne;
 
-@Entity
 public class Rodada {
-    @Id private Long id;
-    private ToOne<Jogador> jogadorToOne;
+    private int numeroRodada;
+    private static int incremento = 0;
 
-    public void setId(Long id) {
-        this.id = id;
+    public Rodada() {
+        this.numeroRodada = incremento++;
     }
 
-    public Long getId() {
-        return id;
-    }
+    public List<Texto> sortearPalavras(Box<Texto> textoBox, Box<Tema> temaBox) {
+        List<Texto> textosSorteados = new ArrayList<Texto>();
+        List<Tema> temas = temaBox.getAll();
+        int contador = 0;
 
-    public void setJogadorToOne(ToOne<Jogador> jogadorToOne) {
-        this.jogadorToOne = jogadorToOne;
-    }
+        Collections.shuffle(temas);
+        long temaId = temas.get(0).getId();
 
-    public ToOne<Jogador> getJogadorToOne() {
-        return jogadorToOne;
+        List<Texto> textos = textoBox.query().equal(Texto_.temaToOneId, temaId).build().find();
+
+        Collections.shuffle(textos);
+
+        for(int i = 0; i < textos.size(); i++) {
+            if(!textos.get(i).getEhFrase()) {
+                textosSorteados.add(textos.get(i));
+                contador++;
+
+                if(contador == 3) {
+                    break;
+                }
+            }
+
+            else {
+                textosSorteados.add(textos.get(i));
+                break;
+            }
+        }
+
+        return textosSorteados;
     }
 }

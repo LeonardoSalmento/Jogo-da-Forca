@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.leo.jogodaforca.App;
@@ -17,6 +19,7 @@ import butterknife.OnClick;
 import io.objectbox.Box;
 
 public class AdicionarTextoActivity extends AppCompatActivity {
+    @BindView(R.id.alternativas) RadioGroup radioGroup;
     @BindView(R.id.edit_texto) EditText editTexto;
 
     private Texto texto;
@@ -38,13 +41,22 @@ public class AdicionarTextoActivity extends AppCompatActivity {
     @OnClick(R.id.btn_salvar_texto)
     public void salvarTexto(View view) {
         String text = editTexto.getText().toString();
+        int radioButtonId = radioGroup.getCheckedRadioButtonId();
 
         if(editTexto.length() == 0) {
             editTexto.setError("Texto não pode estar vazio");
         }
 
+        else if(radioButtonId == -1) {
+            Toast.makeText(this, "Selecione palavra ou frase!", Toast.LENGTH_SHORT);
+        }
+
         else {
-            texto.setTexto(text);
+            if (radioButtonId == R.id.eh_frase) {
+                texto.setEhFrase(true);
+            }
+
+            texto.setTexto(text.trim());
             texto.getTemaToOne().setTargetId(temaId);
             textoBox.put(texto);
 

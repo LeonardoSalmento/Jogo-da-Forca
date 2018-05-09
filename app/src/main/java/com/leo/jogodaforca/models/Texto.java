@@ -8,13 +8,14 @@ import io.objectbox.relation.ToOne;
 /**
  * Created by Leo on 5/6/2018.
  */
+
 @Entity
 public class Texto {
     @Id
     private Long id;
     private String texto;
+    private boolean ehFrase;
 
-    @Backlink
     private ToOne<Tema> temaToOne;
 
     public Texto() {
@@ -42,5 +43,13 @@ public class Texto {
 
     public void setTemaToOne(ToOne<Tema> temaToOne) {
         this.temaToOne = temaToOne;
+    }
+
+    public void setEhFrase(boolean ehFrase) {
+        this.ehFrase = ehFrase;
+    }
+
+    public boolean getEhFrase() {
+        return ehFrase;
     }
 }

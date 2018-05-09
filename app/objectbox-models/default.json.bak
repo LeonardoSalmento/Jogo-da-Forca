@@ -5,20 +5,19 @@
   "entities": [
     {
       "id": "1:4756030260454507742",
-      "lastPropertyId": "1:1707886569830660108",
+      "lastPropertyId": "2:2788300606782351536",
       "name": "Tema",
       "properties": [
         {
           "id": "1:1707886569830660108",
           "name": "id"
+        },
+        {
+          "id": "2:2788300606782351536",
+          "name": "nome"
         }
       ],
-      "relations": [
-        {
-          "id": "1:2810400908369411630",
-          "name": "listaTexto"
-        }
-      ]
+      "relations": []
     },
     {
       "id": "2:4815874962057175989",
@@ -76,16 +75,28 @@
           "name": "id"
         }
       ],
-      "relations": [
+      "relations": []
+    },
+    {
+      "id": "5:431674147019407407",
+      "lastPropertyId": "2:1275220003595554697",
+      "name": "Rodada",
+      "properties": [
         {
-          "id": "2:5357336024583024050",
-          "name": "jogadores"
+          "id": "1:2102231548347714715",
+          "name": "id"
+        },
+        {
+          "id": "2:1275220003595554697",
+          "indexId": "4:8074300729302480408",
+          "name": "jogadorToOneId"
         }
-      ]
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "4:6821130735206448215",
-  "lastIndexId": "3:7173310183871302787",
+  "lastEntityId": "5:431674147019407407",
+  "lastIndexId": "4:8074300729302480408",
   "lastRelationId": "2:5357336024583024050",
   "lastSequenceId": "0:0",
   "modelVersion": 4,
@@ -97,6 +108,9 @@
   "retiredPropertyUids": [
     7821721098836856638
   ],
-  "retiredRelationUids": [],
+  "retiredRelationUids": [
+    5357336024583024050,
+    2810400908369411630
+  ],
   "version": 1
 }
