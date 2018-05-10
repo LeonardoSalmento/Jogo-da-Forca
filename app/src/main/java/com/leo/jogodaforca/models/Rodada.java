@@ -40,6 +40,7 @@ public class Rodada {
             }
 
             else {
+                textosSorteados = new ArrayList<Texto>();
                 textosSorteados.add(textos.get(i));
                 break;
             }
