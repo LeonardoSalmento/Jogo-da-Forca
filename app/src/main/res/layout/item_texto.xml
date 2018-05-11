@@ -4,9 +4,8 @@
     android:foreground="?android:attr/selectableItemBackgroundBorderless"
     android:layout_margin="8dp"
     android:elevation="@dimen/cardview_compat_inset_shadow"
-    android:layout_width="350dp"
-    android:layout_height="50dp"
-    android:layout_gravity="center_horizontal">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
