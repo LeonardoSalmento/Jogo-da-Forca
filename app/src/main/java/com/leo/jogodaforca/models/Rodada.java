@@ -64,4 +64,5 @@ public class Rodada {
     	somaPontuacao = pontuacaoAnterior + pontuacaoRodada;
     	return somaPontuacao;
     }
+
 }

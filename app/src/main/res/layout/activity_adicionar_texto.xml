@@ -5,13 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background_add_palavras_temas"
     tools:context=".activities.AdicionarTextoActivity">
 
     <RadioGroup
         android:id="@+id/alternativas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center">
 
         <RadioButton
             android:id="@+id/eh_palavra"
@@ -23,13 +27,16 @@
             android:id="@+id/eh_frase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="Frase" />
 
     </RadioGroup>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="350dp"
+        android:layout_height="425dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
 
         <EditText
             android:id="@+id/edit_texto"
@@ -41,9 +48,14 @@
 
     <Button
         android:id="@+id/btn_salvar_texto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="Salvar"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Salvar"
+        android:textStyle="bold"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@color/colorFonte"/>
 
 </LinearLayout>

@@ -5,13 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.AdicionarTemaActivity">
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-	android:background="@drawable/background_add_palavras_temas"
-	tools:context=".activities.AdicionarTemaActivity">
+    tools:context=".activities.AdicionarJogadorActivity">
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="350dp"
@@ -23,14 +17,12 @@
             android:id="@+id/edit_tema"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tema" />
+            android:hint="Nome do jogador" />
 
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/btn_salvar_tema"
-        android:text="Salvar"
-        android:textStyle="bold"
+        android:id="@+id/btn_salvar_jogador"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
