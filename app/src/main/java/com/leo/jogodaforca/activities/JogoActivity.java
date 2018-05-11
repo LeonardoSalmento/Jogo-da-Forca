@@ -70,19 +70,4 @@ public class JogoActivity extends AppCompatActivity {
         return textViews;
 
     }
-
-    @OnClick(R.id.btn_salvar_letra)
-    public void verificarLetra(View view) {
-        char letra = editLetras.getText().toString().charAt(0);
-        String letrasErradas = "";
-        //List<TextView> textViewList = listarTextos();
-        Texto texto = getTextoSorteado();
-        int erros = 0;
-
-        for(int i = 0; i < texto.getTexto().length(); i++) {
-            if(letra == texto.getTexto().charAt(i)) {
-                listarTextos().get(i).setText(String.valueOf(letra));
-            }
-        }
-    }
 }
