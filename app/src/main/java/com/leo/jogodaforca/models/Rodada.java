@@ -17,10 +17,9 @@ public class Rodada {
         this.numeroRodada = incremento++;
     }
 
-    public List<Texto> sortearPalavras(Box<Texto> textoBox, Box<Tema> temaBox) {
-        List<Texto> textosSorteados = new ArrayList<Texto>();
+    public Texto sortearPalavras(Box<Texto> textoBox, Box<Tema> temaBox) {
+        Texto textoSorteado = null;
         List<Tema> temas = temaBox.getAll();
-        int contador = 0;
 
         Collections.shuffle(temas);
         long temaId = temas.get(0).getId();
@@ -29,22 +28,20 @@ public class Rodada {
 
         Collections.shuffle(textos);
 
-        for(int i = 0; i < textos.size(); i++) {
-            if(!textos.get(i).getEhFrase()) {
-                textosSorteados.add(textos.get(i));
-                contador++;
+        textoSorteado = textos.get(0);
 
-                if(contador == 3) {
-                    break;
-                }
-            }
+        return textoSorteado;
+    }
 
-            else {
-                textosSorteados.add(textos.get(i));
-                break;
-            }
+
+    public Integer pontucaoRodada(boolean acertou, Integer qtdLetrasEscondidas){
+        if (!acertou){
+            return 0;
         }
 
-        return textosSorteados;
+        Integer pontuacao;
+
+        pontuacao = qtdLetrasEscondidas * 15;
+        return pontuacao;
     }
 }
