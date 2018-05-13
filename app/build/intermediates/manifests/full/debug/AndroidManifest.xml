@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.leo.jogodaforca"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="27" />
+
+    <application
+        android:name="com.leo.jogodaforca.App"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.leo.jogodaforca.activities.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.leo.jogodaforca.activities.TemasActivity" />
+        <activity android:name="com.leo.jogodaforca.activities.TextosActivity" />
+        <activity android:name="com.leo.jogodaforca.activities.AdicionarTemaActivity" />
+        <activity android:name="com.leo.jogodaforca.activities.AdicionarTextoActivity" />
+        <activity android:name="com.leo.jogodaforca.activities.JogoActivity" />
+        <activity android:name="com.leo.jogodaforca.activities.InicioActivity" />
+
+        <service
+            android:name="io.objectbox.android.AndroidObjectBrowserService"
+            android:exported="false" />
+
+        <receiver
+            android:name="io.objectbox.android.AndroidObjectBrowserReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="io.objectbox.action.KEEP_ALIVE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
