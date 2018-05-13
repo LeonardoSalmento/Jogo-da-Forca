@@ -31,4 +31,10 @@ public class MainActivity extends AppCompatActivity {
     public void abrirInciarJogo(View view) {
         startActivity(new Intent(this, JogoActivity.class));
     }
+
+
+    @OnClick(R.id.btn_ranking)
+    public void abrirRanking(View view) {
+        //TODO
+    }
 }

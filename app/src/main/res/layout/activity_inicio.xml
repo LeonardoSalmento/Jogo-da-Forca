@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_tela_ini"
+    tools:context=".activities.InicioActivity">
+
+    <Button
+        android:id="@+id/iniciando_game"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="iniciar jogo"
+        android:layout_marginTop="470dp"
+        android:backgroundTint="#FFC42A"/>
+
+</LinearLayout>

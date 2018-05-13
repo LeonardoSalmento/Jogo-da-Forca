@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background_add_palavras_temas"
     tools:context=".activities.AdicionarTemaActivity">
 
     <android.support.design.widget.TextInputLayout
@@ -21,9 +22,13 @@
 
     <Button
         android:id="@+id/btn_salvar_tema"
-        android:layout_width="match_parent"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="Salvar"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="#ffffff"
+        android:layout_marginTop="450dp"/>
 
 </LinearLayout>

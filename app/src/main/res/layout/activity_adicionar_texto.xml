@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background_add_palavras_temas"
     tools:context=".activities.AdicionarTextoActivity">
 
     <RadioGroup
         android:id="@+id/alternativas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
 
         <RadioButton
             android:id="@+id/eh_palavra"
@@ -41,9 +43,13 @@
 
     <Button
         android:id="@+id/btn_salvar_texto"
-        android:layout_width="match_parent"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="Salvar"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="#ffffff"
+        android:layout_marginTop="410dp"/>
 
 </LinearLayout>

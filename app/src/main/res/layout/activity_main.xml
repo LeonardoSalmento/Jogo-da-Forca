@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/background_menu_inicial"
     tools:context="com.leo.jogodaforca.activities.MainActivity">
 
     <Button
         android:id="@+id/btn_iniciar_jogo"
-        android:layout_width="wrap_content"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:text="Iniciar Jogo"
+        android:text="novo Jogo"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.306" />
+        android:layout_gravity="bottom|left"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn_adicionar_palavra"
-        android:layout_width="wrap_content"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:text="Adicionar Palavra"
+        android:text="add Palavra"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        android:layout_gravity="bottom|center"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="#ffffff" />
+    <Button
+        android:id="@+id/btn_ranking"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="ranking"
+        android:textStyle="bold"
+        android:layout_gravity="bottom|right"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="#ffffff" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
